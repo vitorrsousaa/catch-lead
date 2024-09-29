@@ -27,9 +27,9 @@ export function Sidebar() {
 	const { email, name, picture, pathname, signout } = useSidebarHook();
 
 	return (
-		<aside className="flex fixed sm:min-w-[280px] inset-y-2 left-2 z-10 w-fit flex-col sm:rounded-xl sm:border p-4 sm:bg-muted/30">
+		<aside className="flex fixed w-[280px] inset-y-2 left-2 z-10 flex-col sm:rounded-xl sm:border p-4 sm:bg-muted/30">
 			<nav className="flex flex-col gap-4 px-2 pt-1 w-full">
-				<span className="text-lg font-semibold">App Name</span>
+				<span className="text-lg font-semibold">Catch Lead</span>
 
 				<div className="w-full flex flex-col gap-6">
 					{NAV_ITEMS.map((section) => (
@@ -45,7 +45,7 @@ export function Sidebar() {
 										variant="ghost"
 										className={`w-full p-0 ${
 											pathname === item.href
-												? "bg-accent/40 text-accent-foreground"
+												? "bg-primary/10 text-accent-foreground hover:bg-primary/20"
 												: ""
 										}`}
 									>
@@ -90,7 +90,7 @@ export function Sidebar() {
 							to={ROUTES.SETTINGS}
 							className="px-4 w-full h-full flex items-center justify-start font-normal"
 						>
-							Minha conta
+							Settings
 						</Link>
 					</Button>
 
@@ -100,7 +100,7 @@ export function Sidebar() {
 								variant="ghost"
 								className="justify-start px-4 font-normal w-full"
 							>
-								Sair
+								Logout
 							</Button>
 						</AlertDialogTrigger>
 
@@ -112,8 +112,8 @@ export function Sidebar() {
 								</AlertDialogDescription>
 							</AlertDialogHeader>
 							<AlertDialogFooter>
-								<AlertDialogCancel>Cancelar</AlertDialogCancel>
-								<AlertDialogAction onClick={signout}>Sair</AlertDialogAction>
+								<AlertDialogCancel>Cancel</AlertDialogCancel>
+								<AlertDialogAction onClick={signout}>Logout</AlertDialogAction>
 							</AlertDialogFooter>
 						</AlertDialogContent>
 					</AlertDialog>

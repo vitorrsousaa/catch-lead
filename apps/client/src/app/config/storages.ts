@@ -1,4 +1,4 @@
-const APP_NAME = "APP_NAME";
+const APP_NAME = "CATCH_LEADS";
 
 export const STORAGE_KEYS = {
 	THEME: `${APP_NAME}:theme`,

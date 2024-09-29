@@ -1,4 +1,4 @@
-const APP_NAME = "@app";
+const APP_NAME = "@CATCH_LEADS";
 
 export const QUERY_KEYS = {
 	SETTINGS: [`${APP_NAME}:SETTINGS`],

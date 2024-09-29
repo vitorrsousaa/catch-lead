@@ -14,19 +14,30 @@ interface NavItemsProps {
 
 export const NAV_ITEMS: NavSectionsProps[] = [
 	{
-		label: "Geral",
+		label: "General",
 		items: [
 			{
 				href: ROUTES.DASHBOARD,
 				icon: "home",
-				label: "Página Inicial",
+				label: "Home",
+			},
+			{
+				href: ROUTES.CAMPAIGNS,
+				icon: "rocket",
+				label: "Campaigns",
+			},
+			{
+				href: ROUTES.LEADS,
+				icon: "person",
+				label: "Leads",
 			},
 		],
 	},
 	{
-		label: "Minha conta",
+		label: "My account",
 		items: [
-			{ href: ROUTES.SETTINGS, icon: "settings", label: "Configurações" },
+			{ href: ROUTES.SETTINGS, icon: "settings", label: "Settings" },
+			{ href: ROUTES.SUBSCRIPTION, icon: "id_card", label: "Subscription" },
 		],
 	},
 ];

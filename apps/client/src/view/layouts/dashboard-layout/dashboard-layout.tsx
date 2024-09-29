@@ -21,7 +21,7 @@ export function DashboardLayout() {
 			</Sheet>
 
 			<div className="md:pl-[280px] md:py-4 flex min-h-screen w-full flex-col">
-				<main className="p-4 md:px-6 md:py-0 min-h-screen max-w-4xl w-full m-auto">
+				<main className="p-4 md:px-6 md:py-0 min-h-screen max-w-6xl w-full m-auto">
 					<Outlet />
 				</main>
 			</div>
