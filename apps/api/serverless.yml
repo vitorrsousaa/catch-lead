@@ -110,4 +110,35 @@ functions:
       - httpApi:
           method: GET
           path: /auth/profile
+  getGrowthTotalLeads:
+    handler: src/server/functions/lead/get-growth-total.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /lead/growth-total
+  createLead:
+    handler: src/server/functions/lead/create.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /lead/create
+  getAllLeads:
+    handler: src/server/functions/lead/get-all.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /lead/all
+  getAllCampaigns:
+    handler: src/server/functions/campaign/get-all.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /campaign/all
+  createCampaign:
+    handler: src/server/functions/campaign/create.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /campaign/create
+        
   

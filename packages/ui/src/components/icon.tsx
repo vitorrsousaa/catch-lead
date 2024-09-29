@@ -6,10 +6,12 @@ import {
 	ClockIcon,
 	DotsHorizontalIcon,
 	DotsVerticalIcon,
+	EnvelopeClosedIcon,
 	GearIcon,
 	HamburgerMenuIcon,
 	HomeIcon,
 	IdCardIcon,
+	LinkBreak2Icon,
 	PersonIcon,
 	PlusIcon,
 	QuestionMarkCircledIcon,
@@ -39,6 +41,8 @@ const icons = {
 	dots_horizontal: DotsHorizontalIcon,
 	id_card: IdCardIcon,
 	check: CheckIcon,
+	link_break2: LinkBreak2Icon,
+	envelope_closed: EnvelopeClosedIcon,
 } as const;
 
 export function Icon(props: IconProps) {

@@ -1,9 +1,11 @@
 import {
 	Card,
 	CardContent,
+	CardDescription,
 	CardHeader,
 	CardTitle,
 	cn,
+	Icon,
 	Table,
 	TableBody,
 	TableCell,
@@ -57,9 +59,17 @@ export function DashboardRecentLeads({ className }: DashboardRecentLeadsProps) {
 	]);
 
 	return (
-		<Card className={cn(className)}>
+		<Card
+			className={cn(
+				"opacity-80 bg-yellow-100/20 cursor-not-allowed",
+				className,
+			)}
+		>
 			<CardHeader>
 				<CardTitle>Recent Leads</CardTitle>
+				<CardDescription className="flex flex-row gap-2 items-center">
+					In construction <Icon name="link_break2" />
+				</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<Table>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { ROUTES } from "@/config/routes";
+import { useGetAllCampaigns } from "@/hooks/campaign";
 import {
 	Button,
 	Card,
@@ -18,6 +19,7 @@ import {
 	HeaderScreen,
 	Icon,
 	Input,
+	Skeleton,
 	Table,
 	TableBody,
 	TableCell,
@@ -40,6 +42,8 @@ interface Campaign {
 }
 
 export function Campaigns() {
+	const { isLoadingCampaigns, isErrorCampaigns } = useGetAllCampaigns();
+
 	const [campaigns] = useState<Campaign[]>([
 		{
 			id: 1,
@@ -98,7 +102,10 @@ export function Campaigns() {
 								Manage and monitor your lead generation campaigns
 							</CardDescription>
 						</div>
-						<Button onClick={() => navigate(ROUTES.CREATE_CAMPAIGN)}>
+						<Button
+							onClick={() => navigate(ROUTES.CREATE_CAMPAIGN)}
+							isLoading={isLoadingCampaigns}
+						>
 							<Icon name="plus" className="mr-2 h-4 w-4" /> Create Campaign
 						</Button>
 					</div>
@@ -110,81 +117,98 @@ export function Campaigns() {
 							value={searchTerm}
 							onChange={(e) => setSearchTerm(e.target.value)}
 							className="max-w-sm"
+							disabled={isLoadingCampaigns || isErrorCampaigns}
 						/>
 					</div>
-					<Table>
-						<TableHeader>
-							<TableRow>
-								<TableHead>Name</TableHead>
-								<TableHead className="hidden xl:table-cell">Audience</TableHead>
-								<TableHead className="hidden lg:table-cell">
-									Start Date
-								</TableHead>
-								<TableHead className="hidden lg:table-cell">End Date</TableHead>
-								<TableHead>Status</TableHead>
-								<TableHead className="hidden sm:table-cell">Leads</TableHead>
-								<TableHead className="text-right hidden min-[450px]:table-cell">
-									Actions
-								</TableHead>
-							</TableRow>
-						</TableHeader>
-						<TableBody>
-							{filteredCampaigns.map((campaign) => (
-								<TableRow key={campaign.id}>
-									<TableCell className="font-medium">{campaign.name}</TableCell>
-									<TableCell className="hidden xl:table-cell">
-										{campaign.targetAudience}
-									</TableCell>
-									<TableCell className="hidden lg:table-cell">
-										{format(campaign.startDate, "MMM d, yyyy")}
-									</TableCell>
-									<TableCell className="hidden lg:table-cell">
-										{format(campaign.endDate, "MMM d, yyyy")}
-									</TableCell>
-									<TableCell>
-										<span
-											className={`px-2 py-1 rounded-full text-xs font-semibold
-                      ${
-												campaign.status === "Active"
-													? "bg-green-100 text-green-800"
-													: campaign.status === "Completed"
-														? "bg-gray-100 text-gray-800"
-														: "bg-yellow-100 text-yellow-800"
-											}`}
-										>
-											{campaign.status}
-										</span>
-									</TableCell>
-									<TableCell className="hidden sm:table-cell">
-										{campaign.leads}
-									</TableCell>
-									<TableCell className="text-right  hidden min-[450px]:table-cell">
-										<DropdownMenu>
-											<DropdownMenuTrigger asChild>
-												<Button variant="ghost" className="h-8 w-8 p-0">
-													<span className="sr-only">Open menu</span>
-													<Icon name="dots_vertical" className="h-4 w-4" />
-												</Button>
-											</DropdownMenuTrigger>
-											<DropdownMenuContent align="end">
-												<DropdownMenuLabel>Actions</DropdownMenuLabel>
-												<DropdownMenuItem>View details</DropdownMenuItem>
-												<DropdownMenuItem>Edit campaign</DropdownMenuItem>
-												<DropdownMenuSeparator />
-												<DropdownMenuItem>Delete campaign</DropdownMenuItem>
-											</DropdownMenuContent>
-										</DropdownMenu>
-									</TableCell>
+					{isLoadingCampaigns ? (
+						<Skeleton className="w-full rounded-xl h-44" />
+					) : isErrorCampaigns ? (
+						<>
+							<span>Error</span>
+						</>
+					) : (
+						<Table>
+							<TableHeader>
+								<TableRow>
+									<TableHead>Name</TableHead>
+									<TableHead className="hidden xl:table-cell">
+										Audience
+									</TableHead>
+									<TableHead className="hidden lg:table-cell">
+										Start Date
+									</TableHead>
+									<TableHead className="hidden lg:table-cell">
+										End Date
+									</TableHead>
+									<TableHead>Status</TableHead>
+									<TableHead className="hidden sm:table-cell">Leads</TableHead>
+									<TableHead className="text-right hidden min-[450px]:table-cell">
+										Actions
+									</TableHead>
 								</TableRow>
-							))}
-						</TableBody>
-					</Table>
+							</TableHeader>
+							<TableBody>
+								{filteredCampaigns.map((campaign) => (
+									<TableRow key={campaign.id}>
+										<TableCell className="font-medium">
+											{campaign.name}
+										</TableCell>
+										<TableCell className="hidden xl:table-cell">
+											{campaign.targetAudience}
+										</TableCell>
+										<TableCell className="hidden lg:table-cell">
+											{format(campaign.startDate, "MMM d, yyyy")}
+										</TableCell>
+										<TableCell className="hidden lg:table-cell">
+											{format(campaign.endDate, "MMM d, yyyy")}
+										</TableCell>
+										<TableCell>
+											<span
+												className={`px-2 py-1 rounded-full text-xs font-semibold
+												${
+													campaign.status === "Active"
+														? "bg-green-100 text-green-800"
+														: campaign.status === "Completed"
+															? "bg-gray-100 text-gray-800"
+															: "bg-yellow-100 text-yellow-800"
+												}`}
+											>
+												{campaign.status}
+											</span>
+										</TableCell>
+										<TableCell className="hidden sm:table-cell">
+											{campaign.leads}
+										</TableCell>
+										<TableCell className="text-right  hidden min-[450px]:table-cell">
+											<DropdownMenu>
+												<DropdownMenuTrigger asChild>
+													<Button variant="ghost" className="h-8 w-8 p-0">
+														<span className="sr-only">Open menu</span>
+														<Icon name="dots_vertical" className="h-4 w-4" />
+													</Button>
+												</DropdownMenuTrigger>
+												<DropdownMenuContent align="end">
+													<DropdownMenuLabel>Actions</DropdownMenuLabel>
+													<DropdownMenuItem>View details</DropdownMenuItem>
+													<DropdownMenuItem>Edit campaign</DropdownMenuItem>
+													<DropdownMenuSeparator />
+													<DropdownMenuItem>Delete campaign</DropdownMenuItem>
+												</DropdownMenuContent>
+											</DropdownMenu>
+										</TableCell>
+									</TableRow>
+								))}
+							</TableBody>
+						</Table>
+					)}
 				</CardContent>
-				<CardFooter>
-					<p className="text-sm text-muted-foreground">
-						Showing {filteredCampaigns.length} of {campaigns.length} campaigns
-					</p>
-				</CardFooter>
+				{!isLoadingCampaigns && !isErrorCampaigns && (
+					<CardFooter>
+						<p className="text-sm text-muted-foreground">
+							Showing {filteredCampaigns.length} of {campaigns.length} campaigns
+						</p>
+					</CardFooter>
+				)}
 			</Card>
 		</div>
 	);

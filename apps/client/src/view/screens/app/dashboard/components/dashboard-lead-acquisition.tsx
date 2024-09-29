@@ -1,4 +1,12 @@
-import { Card, CardContent, CardHeader, CardTitle, cn } from "@shared/ui";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle,
+	cn,
+	Icon,
+} from "@shared/ui";
 import type { ApexOptions } from "apexcharts";
 import Chart from "react-apexcharts";
 
@@ -94,9 +102,17 @@ export function DashboardLeadAcquisition({
 	];
 
 	return (
-		<Card className={cn(className)}>
+		<Card
+			className={cn(
+				"opacity-80 bg-yellow-100/20 cursor-not-allowed",
+				className,
+			)}
+		>
 			<CardHeader>
 				<CardTitle>Lead Acquisition</CardTitle>
+				<CardDescription className="flex flex-row gap-2 items-center">
+					In construction <Icon name="link_break2" />
+				</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<Chart {...chartConfig} type="bar" height={240} series={series} />

@@ -25,13 +25,13 @@ const plans = [
 		price: 0,
 		features: ["Up to 5 leads", "Lead capture via form", "Basic reports"],
 		limits: {
-			leads: 5,
+			leads: 100,
 			campaigns: 1,
 		},
 	},
 	{
 		name: "Pro",
-		price: 49,
+		price: 15,
 		features: [
 			"Unlimited leads",
 			"Lead capture via form and API",
@@ -41,8 +41,8 @@ const plans = [
 			"Unlimited campaigns",
 		],
 		limits: {
-			leads: Number.POSITIVE_INFINITY,
-			campaigns: Number.POSITIVE_INFINITY,
+			leads: 3000,
+			campaigns: 3,
 		},
 	},
 ];

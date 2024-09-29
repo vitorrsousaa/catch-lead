@@ -7,7 +7,6 @@ interface IAuthGuardProps {
 
 export function AuthGuard({ isPrivate }: IAuthGuardProps) {
 	// const { signedIn } = useAuth();
-
 	const signedIn = true;
 
 	if (signedIn && !isPrivate) {

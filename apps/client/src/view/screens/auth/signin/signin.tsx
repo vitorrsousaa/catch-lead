@@ -3,9 +3,9 @@ import {
 	Button,
 	Card,
 	CardContent,
-	CardDescription,
 	CardHeader,
 	CardTitle,
+	Icon,
 } from "@shared/ui";
 
 export function Signin() {
@@ -16,18 +16,21 @@ export function Signin() {
 			<Card className="w-full max-w-md">
 				<CardHeader className="space-y-1">
 					<CardTitle className="text-2xl text-center">Login</CardTitle>
-					<CardDescription className="text-center">
-						Entre com sua conta do Google
-					</CardDescription>
 				</CardHeader>
-				<CardContent className="flex justify-center">
+				<CardContent className="flex justify-center flex-col space-y-4">
 					<Button
-						className="w-full max-w-sm"
+						className="w-full max-w-sm gap-2 h-14"
 						variant="outline"
 						onClick={signInWithGoogle}
 					>
-						Login com Google
+						<Icon name="envelope_closed" />
+						Continue with Google
 					</Button>
+					<hr />
+					<small className="text-center">
+						By signing up, you agree to <strong>Terms of User</strong> and{" "}
+						<strong>Privacy Policy</strong>
+					</small>
 				</CardContent>
 			</Card>
 		</div>
