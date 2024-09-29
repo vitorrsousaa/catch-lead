@@ -1,3 +1,5 @@
+import { Icon } from "@shared/ui";
+
 export function Faq() {
 	return (
 		<div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
@@ -27,37 +29,11 @@ export function Faq() {
 							<button
 								className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
 								aria-expanded="true"
+								type="button"
 								aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one"
 							>
 								Can I cancel at anytime?
-								<svg
-									className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m6 9 6 6 6-6" />
-								</svg>
-								<svg
-									className="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m18 15-6-6-6 6" />
-								</svg>
+								<Icon name="chevron_right" className="rotate-90" />
 							</button>
 							<div
 								id="hs-basic-with-title-and-arrow-stretched-collapse-one"
@@ -80,37 +56,11 @@ export function Faq() {
 							<button
 								className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
 								aria-expanded="false"
+								type="button"
 								aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-two"
 							>
 								My team has credits. How do we use them?
-								<svg
-									className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m6 9 6 6 6-6" />
-								</svg>
-								<svg
-									className="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m18 15-6-6-6 6" />
-								</svg>
+								<Icon name="chevron_right" className="rotate-90" />
 							</button>
 							<div
 								id="hs-basic-with-title-and-arrow-stretched-collapse-two"
@@ -132,37 +82,11 @@ export function Faq() {
 							<button
 								className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
 								aria-expanded="false"
+								type="button"
 								aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-three"
 							>
 								How does Preline's pricing work?
-								<svg
-									className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m6 9 6 6 6-6" />
-								</svg>
-								<svg
-									className="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m18 15-6-6-6 6" />
-								</svg>
+								<Icon name="chevron_right" className="rotate-90" />
 							</button>
 							<div
 								id="hs-basic-with-title-and-arrow-stretched-collapse-three"
@@ -184,37 +108,11 @@ export function Faq() {
 							<button
 								className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
 								aria-expanded="false"
+								type="button"
 								aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-four"
 							>
 								How secure is Preline?
-								<svg
-									className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m6 9 6 6 6-6" />
-								</svg>
-								<svg
-									className="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m18 15-6-6-6 6" />
-								</svg>
+								<Icon name="chevron_right" className="rotate-90" />
 							</button>
 							<div
 								id="hs-basic-with-title-and-arrow-stretched-collapse-four"
@@ -237,37 +135,11 @@ export function Faq() {
 							<button
 								className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
 								aria-expanded="false"
+								type="button"
 								aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-five"
 							>
 								How do I get access to a theme I purchased?
-								<svg
-									className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m6 9 6 6 6-6" />
-								</svg>
-								<svg
-									className="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m18 15-6-6-6 6" />
-								</svg>
+								<Icon name="chevron_right" className="rotate-90" />
 							</button>
 							<div
 								id="hs-basic-with-title-and-arrow-stretched-collapse-five"
@@ -293,37 +165,11 @@ export function Faq() {
 							<button
 								className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
 								aria-expanded="false"
+								type="button"
 								aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-six"
 							>
 								Upgrade License Type
-								<svg
-									className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m6 9 6 6 6-6" />
-								</svg>
-								<svg
-									className="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								>
-									<path d="m18 15-6-6-6 6" />
-								</svg>
+								<Icon name="chevron_right" className="rotate-90" />
 							</button>
 							<div
 								id="hs-basic-with-title-and-arrow-stretched-collapse-six"
