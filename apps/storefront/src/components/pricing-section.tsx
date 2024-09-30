@@ -39,7 +39,7 @@ export function PricingSection() {
 									500 emails per month
 								</li>
 
-								<li className="text-gray-800 dark:text-neutral-400"></li>
+								<li className="text-gray-800 dark:text-neutral-400" />
 							</ul>
 						</div>
 

@@ -77,7 +77,7 @@ export function FeatureNav() {
 							<div className="p-1.5 bg-gray-100 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)] dark:bg-neutral-700">
 								<img
 									className="max-w-full rounded-[1.25rem] h-auto"
-									src="img9.jpg"
+									src="img3.png"
 									alt="Features"
 								/>
 							</div>
@@ -100,7 +100,7 @@ export function FeatureNav() {
 							<div className="bg-gray-800 rounded-b-lg">
 								<img
 									className="max-w-full h-auto rounded-b-lg"
-									src="img8.jpg"
+									src="img6.png"
 									alt="Features"
 								/>
 							</div>
